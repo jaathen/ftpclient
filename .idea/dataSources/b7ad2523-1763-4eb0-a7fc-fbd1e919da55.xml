@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="mydb@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.0">
+    <root id="1"/>
+    <schema id="2" parent="1" name="mydb">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="information_schema"/>
+    <schema id="4" parent="1" name="mysql"/>
+    <schema id="5" parent="1" name="performance_schema"/>
+    <schema id="6" parent="1" name="sakila"/>
+    <schema id="7" parent="1" name="sework"/>
+    <schema id="8" parent="1" name="sys"/>
+    <schema id="9" parent="1" name="world"/>
+    <table id="10" parent="2" name="jsj46_c141"/>
+    <table id="11" parent="2" name="jsj46_s141"/>
+    <table id="12" parent="2" name="jsj46_sc141"/>
+    <view id="13" parent="2" name="view1">
+      <Comment>VIEW</Comment>
+    </view>
+    <view id="14" parent="2" name="view2">
+      <Comment>VIEW</Comment>
+    </view>
+    <view id="15" parent="2" name="view3">
+      <Comment>VIEW</Comment>
+    </view>
+    <column id="16" parent="10" name="CNO">
+      <Position>1</Position>
+      <DataType>char(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="17" parent="10" name="CNAME">
+      <Position>2</Position>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="18" parent="10" name="PERIOD">
+      <Position>3</Position>
+      <DataType>decimal(3) unsigned|0</DataType>
+    </column>
+    <column id="19" parent="10" name="CREDIT">
+      <Position>4</Position>
+      <DataType>decimal(3,1) unsigned|0</DataType>
+    </column>
+    <column id="20" parent="10" name="TEACHER">
+      <Position>5</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <index id="21" parent="10" name="CNO_UNIQUE">
+      <ColNames>CNO</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="22" parent="10" name="PRIMARY">
+      <ColNames>CNO</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="23" parent="10" name="CNO_UNIQUE">
+      <ColNames>CNO</ColNames>
+      <UnderlyingIndexName>CNO_UNIQUE</UnderlyingIndexName>
+    </key>
+    <column id="24" parent="11" name="SNO">
+      <Position>1</Position>
+      <DataType>char(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="25" parent="11" name="SNAME">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="26" parent="11" name="GENDER">
+      <Position>3</Position>
+      <DataType>char(2)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="27" parent="11" name="HEIGHT">
+      <Position>4</Position>
+      <DataType>decimal(3,2) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="28" parent="11" name="DORM">
+      <Position>5</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="29" parent="11" name="BDATE">
+      <Position>6</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="30" parent="11" name="SNO_UNIQUE">
+      <ColNames>SNO</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="31" parent="11" name="PRIMARY">
+      <ColNames>SNO</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="32" parent="11" name="SNO_UNIQUE">
+      <ColNames>SNO</ColNames>
+      <UnderlyingIndexName>SNO_UNIQUE</UnderlyingIndexName>
+    </key>
+    <column id="33" parent="12" name="SNO">
+      <Position>1</Position>
+      <DataType>char(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="34" parent="12" name="CNO">
+      <Position>2</Position>
+      <DataType>char(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="35" parent="12" name="GRADE">
+      <Position>3</Position>
+      <DataType>decimal(4,1) unsigned|0</DataType>
+    </column>
+    <index id="36" parent="12" name="CNO_idx">
+      <ColNames>CNO</ColNames>
+    </index>
+    <key id="37" parent="12" name="PRIMARY">
+      <ColNames>SNO
+CNO</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="38" parent="12" name="SNO">
+      <ColNames>SNO</ColNames>
+      <RefSchemaName>mydb</RefSchemaName>
+      <RefTableName>jsj46_s141</RefTableName>
+      <RefColNames>SNO</RefColNames>
+      <OnUpdate>no-action</OnUpdate>
+      <OnDelete>no-action</OnDelete>
+    </foreign-key>
+    <foreign-key id="39" parent="12" name="CNO">
+      <ColNames>CNO</ColNames>
+      <RefSchemaName>mydb</RefSchemaName>
+      <RefTableName>jsj46_c141</RefTableName>
+      <RefColNames>CNO</RefColNames>
+      <OnUpdate>no-action</OnUpdate>
+      <OnDelete>no-action</OnDelete>
+    </foreign-key>
+    <column id="40" parent="13" name="SNO">
+      <Position>1</Position>
+      <DataType>char(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="41" parent="13" name="SNAME">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="42" parent="13" name="BDATE">
+      <Position>3</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="43" parent="13" name="HEIGHT">
+      <Position>4</Position>
+      <DataType>decimal(3,2) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="44" parent="14" name="CNO">
+      <Position>1</Position>
+      <DataType>char(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="45" parent="14" name="CNAME">
+      <Position>2</Position>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="46" parent="14" name="PERIOD">
+      <Position>3</Position>
+      <DataType>decimal(3) unsigned|0</DataType>
+    </column>
+    <column id="47" parent="14" name="CREDIT">
+      <Position>4</Position>
+      <DataType>decimal(3,1) unsigned|0</DataType>
+    </column>
+    <column id="48" parent="14" name="TEACHER">
+      <Position>5</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="49" parent="15" name="SNO">
+      <Position>1</Position>
+      <DataType>char(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="50" parent="15" name="SNAME">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="51" parent="15" name="GRADE">
+      <Position>3</Position>
+      <DataType>decimal(4,1) unsigned|0</DataType>
+    </column>
+  </database-model>
+</dataSource>
